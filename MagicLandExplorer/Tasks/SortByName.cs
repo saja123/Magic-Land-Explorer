@@ -8,9 +8,10 @@ namespace MagicLandExplorer.Tasks
     {
         public static void ShowSortedDestinations(List<Category> categories)
         {
-            var sortedDestinations = categories.SelectMany(c => c.Destinations)
-                                        .OrderBy(n => n.Name)
-                                        .ToList();
+            var sortedDestinations = categories
+                .SelectMany(c => c.Destinations)
+                .OrderBy(n => n.Name)
+                .ToList();
 
             Console.WriteLine("Destinations sorted by name:");
             foreach (var destination in sortedDestinations)

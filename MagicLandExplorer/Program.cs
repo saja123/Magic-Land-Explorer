@@ -15,16 +15,6 @@ public class Program
             var json = File.ReadAllText(path);
             List<Category> categories = JsonConvert.DeserializeObject<List<Category>>(json);
 
-            //foreach (var category in categories)
-            //{
-            //    Console.WriteLine($"Category: {category.CategoryName}");
-            //    foreach (var destination in category.Destinations)
-            //    {
-            //        Console.WriteLine($"  Destination: {destination.Name}, Duration: {destination.Duration}");
-            //    }
-            //}
-
-
             while (true)
             {
                 Console.WriteLine("Choose an option:");
@@ -54,12 +44,8 @@ public class Program
                     default:
                         Console.WriteLine("Invalide option");
                         break;
-
                 }
-
             }
-
-
         }
         catch (Exception ex)
         {
